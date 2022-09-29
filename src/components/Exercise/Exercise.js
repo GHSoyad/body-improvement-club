@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClockRotateLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Exercise = (props) => {
-    const { name, image, description, time } = props.exercise;
-    console.log(name)
+    const { exercise, addToList } = props;
+    const { id, name, image, description, time } = exercise;
 
     return (
         <div className='exercise'>
@@ -16,7 +16,7 @@ const Exercise = (props) => {
             <p><span className='bold'>Description:</span> {description}</p>
             <div>
                 <p><span className='bold'>Time Needed:</span> {time} Seconds</p>
-                <button className='exercise-btn'>
+                <button onClick={() => addToList(exercise)} id={id} className='exercise-btn'>
                     <p>Add to List</p>
                     <FontAwesomeIcon icon={faClockRotateLeft} />
                 </button>

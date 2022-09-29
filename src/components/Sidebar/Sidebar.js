@@ -1,7 +1,8 @@
 import React from 'react';
 import './Sidebar.css'
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+    const { exerciseTime } = props;
     return (
         <div className='sidebar'>
             <div className='user'>
@@ -37,7 +38,7 @@ const Sidebar = () => {
             <div className='exercise-details'>
                 <div className='exercise-detail'>
                     <p className='bold'>Exercise Time</p>
-                    <p>Seconds</p>
+                    <p><span className='bold'>{exerciseTime} </span> Seconds</p>
                 </div>
                 <div className='exercise-detail'>
                     <p className='bold'>Break Time</p>
