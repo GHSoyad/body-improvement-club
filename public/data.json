@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Squat",
+        "description": "A squat is a strength exercise in which the trainee lowers their hips from a standing position and then stands back up.",
+        "time": "20",
+        "image": "./images/squat.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Split Squat",
+        "description": "Retract your shoulders, and keep your chest and chin elevated. Keeping your core engaged, rise to the start position",
+        "time": "25",
+        "image": "./images/split-squat.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Burpees",
+        "description": "The burpee, a squat thrust with an additional stand between repetitions, is a full body exercise used in strength training.",
+        "time": "30",
+        "image": "./images/burpees.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Mountain Climber",
+        "description": "A mountain climber is a bodyweight exercise that activates muscles throughout your body.",
+        "time": "25",
+        "image": "./images/mountain-climber.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Plank Jack",
+        "description": "Jump both feet out wide to each side as if you were doing a horizontal jumping jack.",
+        "time": "30",
+        "image": "./images/plank-jack.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Push-Up",
+        "description": "The push-up is a common calisthenics exercise beginning from the prone position.",
+        "time": "20",
+        "image": "./images/push-up.jpg"
+    }
+]
