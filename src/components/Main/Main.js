@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Exercises from '../Exercises/Exercises';
+import Sidebar from '../Sidebar/Sidebar';
 import './Main.css'
 
 const Main = () => {
@@ -12,10 +13,9 @@ const Main = () => {
     }, [])
 
     return (
-        <div>
-            <div>
-                <Exercises exercises={exercises}></Exercises>
-            </div>
+        <div className='main'>
+            <Exercises exercises={exercises}></Exercises>
+            <Sidebar></Sidebar>
         </div>
     );
 };

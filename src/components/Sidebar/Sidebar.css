@@ -1,0 +1,73 @@
+.sidebar {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.user {
+    display: flex;
+    gap: 10px;
+}
+
+.user img {
+    width: 56px;
+    border-radius: 50%;
+}
+
+.user-details {
+    text-align: left;
+}
+
+.physics {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #FFE6D6;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.break {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #FFE6D6;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.break button {
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    height: 40px;
+    width: 40px;
+    font-weight: bold;
+    color: #183153;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.break button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.exercise-detail {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFE6D6;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.complete {
+    margin-top: 40px;
+}
+
+.side-header {
+    margin-top: 40px;
+}

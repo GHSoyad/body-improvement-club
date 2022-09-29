@@ -7,8 +7,13 @@
 .App {
   max-width: 1200px;
   margin: 40px auto;
+  color: #183153;
 }
 
 .bold {
   font-weight: bold;
+}
+
+p {
+  font-size: 14px;
 }
