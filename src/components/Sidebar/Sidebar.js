@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BreakTime from '../BreakTime/BreakTime';
 import './Sidebar.css'
 
 const Sidebar = (props) => {
     const { exerciseTime } = props;
+    const breakTimes = [10, 20, 30, 40, 50];
+
+    const [breakTime, setBreakTime] = useState(0);
+
+    const addBreakTime = (time) => {
+        const newBreakTime = time;
+        setBreakTime(newBreakTime);
+        const activeBtn = document.getElementById(`breakTime${time}`);
+        const restBtns = document.querySelectorAll('.break-btn');
+        console.log(restBtns)
+        for (let button of restBtns) {
+            button.classList.remove('active-btn');
+            console.log(button)
+        }
+        activeBtn.classList.add('active-btn');
+
+    }
+
+
     return (
         <div className='sidebar'>
             <div className='user'>
@@ -28,11 +48,9 @@ const Sidebar = (props) => {
             </div>
             <p className='bold side-header'>Add a Break</p>
             <div className='break'>
-                <button>10s</button>
-                <button>20s</button>
-                <button>30s</button>
-                <button>40s</button>
-                <button>50s</button>
+                {
+                    breakTimes.map((time, index) => <BreakTime time={time} key={index} addBreakTime={addBreakTime}></BreakTime>)
+                }
             </div>
             <p className='bold side-header'>Exercise Details</p>
             <div className='exercise-details'>
@@ -42,7 +60,7 @@ const Sidebar = (props) => {
                 </div>
                 <div className='exercise-detail'>
                     <p className='bold'>Break Time</p>
-                    <p>Seconds</p>
+                    <p><span className='bold'>{breakTime} </span> Seconds</p>
                 </div>
             </div>
             <button className='complete'>Activity Complete</button>
