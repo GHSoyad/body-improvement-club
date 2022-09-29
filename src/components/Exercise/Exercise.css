@@ -1,0 +1,63 @@
+.exercise {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.exercise:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.exercise img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+.exercise h3 {
+    margin: 0 10px;
+    color: orangered;
+}
+
+.exercise p {
+    font-size: 14px;
+    margin: 10px 10px 0;
+}
+
+.exercise button {
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: orangered;
+    border: 2px solid orangered;
+    border-radius: 5px;
+    color: white;
+    transition: .3s;
+}
+
+.exercise button:hover {
+    background-color: white;
+    border: 2px solid orangered;
+    color: orangered;
+    cursor: pointer;
+}
+
+.exercise button:active {
+    background-color: orangered;
+    border: 2px solid orangered;
+    color: white;
+}
+
+.exercise-btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.exercise-btn p {
+    margin: 0;
+}
