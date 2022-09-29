@@ -1,6 +1,10 @@
 .sidebar {
     padding: 15px 0;
     text-align: center;
+    background-color: #ffeee45f;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
 }
 
 .user {
@@ -70,4 +74,29 @@
 
 .side-header {
     margin-top: 40px;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    } */
+
+    .user {
+        justify-content: center;
+    }
+
+    .side-header {
+        margin-top: 20px;
+    }
+
+    .physics,
+    .break,
+    .exercise-detail,
+    .complete {
+        margin: 10px 0;
+    }
 }

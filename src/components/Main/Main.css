@@ -1,6 +1,13 @@
 .main {
     display: grid;
     grid-template-columns: 1fr 280px;
-    gap: 30px;
+    gap: 20px;
     margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }

@@ -26,6 +26,12 @@ p {
 
 @media screen and (max-width: 768px) {
   .App {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .App {
     padding: 0 10px;
   }
 }
