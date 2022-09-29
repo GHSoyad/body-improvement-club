@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import BreakTime from '../BreakTime/BreakTime';
-import './Sidebar.css'
+import './Sidebar.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Sidebar = (props) => {
     const { exerciseTime } = props;
@@ -30,6 +32,16 @@ const Sidebar = (props) => {
 
         localStorage.setItem('breakTime', newBreakTime);
     }
+
+    const notify = () => toast.success('Wow so easy! You have completed todays exercise!!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+    });
 
 
     return (
@@ -72,7 +84,18 @@ const Sidebar = (props) => {
                     <p><span className='bold'>{breakTime} </span> Seconds</p>
                 </div>
             </div>
-            <button className='complete'>Activity Complete</button>
+            <button onClick={notify} className='complete'>Activity Complete</button>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable={false}
+                pauseOnHover
+            />
         </div>
     );
 };
