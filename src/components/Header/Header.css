@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header h2 {
+    color: orangered;
+    font-weight: bold;
+}
+
+.header img {
+    width: 60px;
+}

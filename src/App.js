@@ -1,11 +1,10 @@
-import logo from './logo.png';
 import './App.css';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>initialize</p>
+      <Header></Header>
     </div>
   );
 }
