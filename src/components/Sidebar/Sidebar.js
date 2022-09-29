@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BreakTime from '../BreakTime/BreakTime';
 import './Sidebar.css'
 
@@ -8,9 +8,17 @@ const Sidebar = (props) => {
 
     const [breakTime, setBreakTime] = useState(0);
 
+    useEffect(() => {
+        const storedBreakTime = localStorage.getItem('breakTime');
+        if (storedBreakTime) {
+            setBreakTime(storedBreakTime)
+        }
+    }, [])
+
     const addBreakTime = (time) => {
         const newBreakTime = time;
         setBreakTime(newBreakTime);
+
         const activeBtn = document.getElementById(`breakTime${time}`);
         const restBtns = document.querySelectorAll('.break-btn');
         console.log(restBtns)
@@ -20,6 +28,7 @@ const Sidebar = (props) => {
         }
         activeBtn.classList.add('active-btn');
 
+        localStorage.setItem('breakTime', newBreakTime);
     }
 
 
